@@ -111,7 +111,7 @@ local function _read_reply(sock)
 		end
 		local d_len = tonumber(line)
 
-		--local data, err, partial = sock:receive(d_len)
+		-- read block data
 		local data, err, partial = sock:receive(d_len)
 		insert(val, data);
 
